@@ -1,6 +1,6 @@
 # 10 - JIT & Kernel Fusion
 
-**Code:** `src/autograd/jit.py`
+**Code:** `src/vjpflow/jit.py`
 
 This chapter cashes in the lazy design. Because the computation graph exists as
 *data* before anything runs, we can **rewrite it to run faster** -- the entire
@@ -78,7 +78,7 @@ Two correctness rules the pass must respect:
 ## Watch it work
 
 ```python
-from autograd.jit import fuse_elementwise
+from vjpflow.jit import fuse_elementwise
 out = P.tanh(P.exp(P.neg(P.sqrt(P.exp(x * x)))))
 fused, stats = fuse_elementwise(out)
 print(stats.nodes_before, "->", stats.nodes_after)   # 6 -> 2

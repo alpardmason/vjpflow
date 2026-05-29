@@ -1,6 +1,6 @@
 # 02 - Tensors and the Lazy Computation Graph
 
-**Code:** `src/autograd/tensor.py`, `src/autograd/graph.py`
+**Code:** `src/vjpflow/tensor.py`, `src/vjpflow/graph.py`
 
 This is the foundation. Everything else -- primitives, autodiff, backends, the
 GPT-2 model -- is built on the idea in this chapter: a `Tensor` is not a number,
@@ -56,7 +56,7 @@ functional ops in `primitives.py`:
 
 ```python
 def __add__(self, other):
-    from autograd import primitives as P   # lazy import avoids a cycle
+    from vjpflow import primitives as P   # lazy import avoids a cycle
     return P.add(self, other)
 ```
 
@@ -106,8 +106,8 @@ already-materialized parent arrays. After this loop the root holds its value.
 ## Try it
 
 ```python
-from autograd import tensor
-import autograd.primitives as P
+from vjpflow import tensor
+import vjpflow.primitives as P
 
 a = tensor([[1., 2.], [3., 4.]])
 c = P.exp(a * a)          # builds a graph; nothing computed

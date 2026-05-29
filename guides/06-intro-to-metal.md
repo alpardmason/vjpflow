@@ -112,7 +112,7 @@ all of them in parallel.**
 - Xcode **Command Line Tools** (`xcode-select --install`) provide the Metal
   compiler used when we build the library from source at runtime.
 
-Verify: `uv run python -c "from autograd.backends.metal_backend import MetalBackend; print(MetalBackend.is_available())"` should print `True`.
+Verify: `uv run python -c "from vjpflow.backends.metal_backend import MetalBackend; print(MetalBackend.is_available())"` should print `True`.
 
 ## Scope of our backend (important expectation-setting)
 

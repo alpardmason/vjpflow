@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import numpy as np
 
-from autograd import primitives as P
-from autograd import tensor
-from autograd.jit import FusedUnary, fuse_elementwise, jit
+from vjpflow import primitives as P
+from vjpflow import tensor
+from vjpflow.jit import FusedUnary, fuse_elementwise, jit
 
 
 def test_fusion_preserves_values() -> None:

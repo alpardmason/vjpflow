@@ -1,6 +1,6 @@
 # 07 - Raw Metal Backend with PyObjC
 
-**Code:** `src/autograd/backends/metal_backend.py`, `backends/metal/kernels.metal`
+**Code:** `src/vjpflow/backends/metal_backend.py`, `backends/metal/kernels.metal`
 
 Now we turn the concepts from [06](06-intro-to-metal.md) into a working GPU
 backend. We drive Apple's Metal C API directly from Python via **PyObjC**, which

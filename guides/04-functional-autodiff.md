@@ -1,6 +1,6 @@
 # 04 - Functional Autodiff: `grad` and `value_and_grad`
 
-**Code:** `src/autograd/autodiff.py`
+**Code:** `src/vjpflow/autodiff.py`
 
 This is the chapter where it all comes together. We have lazy nodes
 ([02](02-tensors-and-the-lazy-graph.md)) and local gradient rules

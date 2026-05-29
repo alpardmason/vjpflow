@@ -1,6 +1,6 @@
 # 05 - The Backend Abstraction and the numpy Reference
 
-**Code:** `src/autograd/backends/base.py`, `numpy_backend.py`, `__init__.py`
+**Code:** `src/vjpflow/backends/base.py`, `numpy_backend.py`, `__init__.py`
 
 The graph and autodiff never touch raw arrays directly -- they go through a
 **backend**. This chapter is short because numpy makes it short, but the
@@ -79,7 +79,7 @@ accumulation (a token appearing twice gets two gradient contributions) -- see
 default:
 
 ```python
-from autograd import set_default_backend
+from vjpflow import set_default_backend
 set_default_backend("metal")   # every new leaf tensor now lives on the GPU
 ```
 

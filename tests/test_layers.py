@@ -5,9 +5,9 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-import autograd.nn.functional as F
-from autograd import tensor
+import vjpflow.nn.functional as F
 from tests.util import check_grad
+from vjpflow import tensor
 
 
 @pytest.fixture(autouse=True)

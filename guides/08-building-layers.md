@@ -1,6 +1,6 @@
 # 08 - Building Layers from Primitives
 
-**Code:** `src/autograd/nn/functional.py` -- **Math:** the layer notes in `notes/`
+**Code:** `src/vjpflow/nn/functional.py` -- **Math:** the layer notes in `notes/`
 
 Here is the payoff of an autograd engine: we write each layer as a **forward
 pass only**, composed from the primitives of [03](03-primitives-and-vjp.md), and

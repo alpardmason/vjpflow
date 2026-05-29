@@ -1,6 +1,6 @@
 # 09 - Capstone: GPT-2, Forward and Backward
 
-**Code:** `src/autograd/models/gpt2.py` -- **Math:** `notes/GPT-2 Back Propagation.md`
+**Code:** `src/vjpflow/models/gpt2.py` -- **Math:** `notes/GPT-2 Back Propagation.md`
 
 Everything converges here. We assemble the layers from
 [08](08-building-layers.md) into a complete GPT-2, run a forward pass, and -- with

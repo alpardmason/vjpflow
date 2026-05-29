@@ -1,4 +1,4 @@
-# autograd — a tiny lazy autograd engine
+# VJPFlow — a tiny lazy autograd engine
 
 An educational reverse-mode automatic-differentiation engine built the way MLX
 and JAX build theirs: a **lazy computation graph** plus a **functional `grad`
@@ -33,7 +33,7 @@ uv sync --extra metal   # add the Apple-Silicon Metal backend (macOS only)
 
 ```python
 import numpy as np
-from autograd import tensor, value_and_grad
+from vjpflow import tensor, value_and_grad
 
 def loss(W, x, y):
     pred = x @ W            # builds a graph node; nothing runs yet
@@ -50,14 +50,14 @@ print(L.item(), gW.numpy().shape)   # eval() is forced here
 
 ## Layout
 
-- `src/autograd/tensor.py` — the lazy `Tensor` node
-- `src/autograd/graph.py` — topological sort + evaluation engine
-- `src/autograd/primitives.py` — the primitive ops (`forward` + `vjp`)
-- `src/autograd/autodiff.py` — `grad` / `value_and_grad`
-- `src/autograd/backends/` — numpy reference + raw Metal (PyObjC) backends
-- `src/autograd/nn/functional.py` — layers composed from primitives
-- `src/autograd/models/gpt2.py` — the end-to-end capstone
-- `src/autograd/jit.py` — trace/cache + a fusion pass demo
+- `src/vjpflow/tensor.py` — the lazy `Tensor` node
+- `src/vjpflow/graph.py` — topological sort + evaluation engine
+- `src/vjpflow/primitives.py` — the primitive ops (`forward` + `vjp`)
+- `src/vjpflow/autodiff.py` — `grad` / `value_and_grad`
+- `src/vjpflow/backends/` — numpy reference + raw Metal (PyObjC) backends
+- `src/vjpflow/nn/functional.py` — layers composed from primitives
+- `src/vjpflow/models/gpt2.py` — the end-to-end capstone
+- `src/vjpflow/jit.py` — trace/cache + a fusion pass demo
 - `guides/` — the reading companion (start at `00`)
 
 ## Tests

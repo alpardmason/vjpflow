@@ -16,7 +16,7 @@ from collections.abc import Callable, Sequence
 
 import numpy as np
 
-from autograd import Tensor, tensor, value_and_grad
+from vjpflow import Tensor, tensor, value_and_grad
 
 
 def numeric_grad(

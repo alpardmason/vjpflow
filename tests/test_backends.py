@@ -10,10 +10,10 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from autograd import primitives as P
-from autograd import tensor
-from autograd.backends import get_backend
-from autograd.backends.metal_backend import MetalBackend
+from vjpflow import primitives as P
+from vjpflow import tensor
+from vjpflow.backends import get_backend
+from vjpflow.backends.metal_backend import MetalBackend
 
 metal_available = MetalBackend.is_available()
 pytestmark = pytest.mark.skipif(not metal_available, reason="Metal GPU unavailable")
@@ -60,7 +60,7 @@ def test_small_mlp_end_to_end_parity() -> None:
     w = rng.normal(size=(16, 4)).astype(np.float32)
 
     def forward(xt, wt):
-        from autograd.nn import functional as Fn
+        from vjpflow.nn import functional as Fn
 
         return Fn.softmax(Fn.relu(xt @ wt))
 

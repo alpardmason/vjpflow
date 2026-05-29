@@ -5,9 +5,9 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from autograd import primitives as P
-from autograd import tensor
 from tests.util import check_grad
+from vjpflow import primitives as P
+from vjpflow import tensor
 
 
 @pytest.fixture(autouse=True)
@@ -68,7 +68,7 @@ def test_scatter_add_grad_multidimensional_indices() -> None:
     # Regression: with 2-D indices, ``updates`` has shape indices.shape +
     # out_shape[1:], so the backward gather tail must be out_shape[1:], NOT
     # updates.shape[1:] (which would over-keep an axis and mis-shape the grad).
-    from autograd import value_and_grad
+    from vjpflow import value_and_grad
 
     idx = np.array([[0, 2, 4], [1, 1, 3]])  # shape (2, 3)
     out_shape = (5, 4)

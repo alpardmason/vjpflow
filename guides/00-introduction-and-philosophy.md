@@ -1,7 +1,7 @@
 # 00 - Introduction & Philosophy
 
 > Reading companion for an educational autograd engine. Read these guides in
-> order; each maps onto one module in `src/autograd/` and one or more
+> order; each maps onto one module in `src/vjpflow/` and one or more
 > derivations in `notes/`.
 
 ## What you will build
@@ -84,15 +84,15 @@ derivatives) works with no extra code. See [04](04-functional-autodiff.md).
 
 | Module | Guide | Role |
 |---|---|---|
-| `src/autograd/tensor.py` | [02](02-tensors-and-the-lazy-graph.md) | the lazy graph node |
-| `src/autograd/graph.py` | [02](02-tensors-and-the-lazy-graph.md) | topo sort + evaluation |
-| `src/autograd/primitives.py` | [03](03-primitives-and-vjp.md) | the ~20 ops (forward + vjp) |
-| `src/autograd/autodiff.py` | [04](04-functional-autodiff.md) | `grad` / `value_and_grad` |
-| `src/autograd/backends/numpy_backend.py` | [05](05-numpy-backend.md) | CPU reference |
-| `src/autograd/backends/metal_backend.py` | [06](06-intro-to-metal.md), [07](07-raw-metal-backend-pyobjc.md) | Apple GPU |
-| `src/autograd/nn/functional.py` | [08](08-building-layers.md) | layers |
-| `src/autograd/models/gpt2.py` | [09](09-capstone-gpt2.md) | capstone |
-| `src/autograd/jit.py` | [10](10-jit-and-fusion.md) | compile + fusion |
+| `src/vjpflow/tensor.py` | [02](02-tensors-and-the-lazy-graph.md) | the lazy graph node |
+| `src/vjpflow/graph.py` | [02](02-tensors-and-the-lazy-graph.md) | topo sort + evaluation |
+| `src/vjpflow/primitives.py` | [03](03-primitives-and-vjp.md) | the ~20 ops (forward + vjp) |
+| `src/vjpflow/autodiff.py` | [04](04-functional-autodiff.md) | `grad` / `value_and_grad` |
+| `src/vjpflow/backends/numpy_backend.py` | [05](05-numpy-backend.md) | CPU reference |
+| `src/vjpflow/backends/metal_backend.py` | [06](06-intro-to-metal.md), [07](07-raw-metal-backend-pyobjc.md) | Apple GPU |
+| `src/vjpflow/nn/functional.py` | [08](08-building-layers.md) | layers |
+| `src/vjpflow/models/gpt2.py` | [09](09-capstone-gpt2.md) | capstone |
+| `src/vjpflow/jit.py` | [10](10-jit-and-fusion.md) | compile + fusion |
 | `notes/` (Obsidian vault) | [11](11-guided-exercises.md) | the math |
 
 ## How to read

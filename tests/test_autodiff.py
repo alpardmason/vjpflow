@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from autograd import grad, tensor, value_and_grad
-from autograd import primitives as P
+from vjpflow import grad, tensor, value_and_grad
+from vjpflow import primitives as P
 
 
 def test_value_and_grad_returns_value_and_grad() -> None:

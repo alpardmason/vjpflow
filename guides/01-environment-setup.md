@@ -20,7 +20,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ## Create the environment
 
 ```bash
-cd autograds
+cd vjpflow
 uv venv --python 3.12      # creates .venv with CPython 3.12
 uv sync                    # installs the core engine (numpy only)
 ```
@@ -29,7 +29,7 @@ uv sync                    # installs the core engine (numpy only)
 (pytest, ruff, pyright). Run anything inside the environment with `uv run`:
 
 ```bash
-uv run python -c "import autograd; print('ok')"
+uv run python -c "import vjpflow; print('ok')"
 uv run pytest
 uv run ruff check .
 uv run pyright
@@ -47,7 +47,7 @@ uv sync --extra metal      # macOS / Apple Silicon only
 Check it actually found a GPU:
 
 ```bash
-uv run python -c "from autograd.backends.metal_backend import MetalBackend; print(MetalBackend.is_available())"
+uv run python -c "from vjpflow.backends.metal_backend import MetalBackend; print(MetalBackend.is_available())"
 ```
 
 - `True`  -> the Metal parity tests in `tests/test_backends.py` will run.

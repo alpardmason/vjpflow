@@ -1,6 +1,6 @@
 # 03 - Primitives and the Vector-Jacobian Product
 
-**Code:** `src/autograd/primitives.py` -- **Math:** `notes/Back Propagation.md`
+**Code:** `src/vjpflow/primitives.py` -- **Math:** `notes/Back Propagation.md`
 
 A primitive is the atom of the engine. Each one knows two things: how to compute
 itself (`forward`) and how to push a gradient back through itself (`vjp`).

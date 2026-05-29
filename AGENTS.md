@@ -1,4 +1,4 @@
-# AGENTS.md - autograd (educational lazy autograd engine)
+# AGENTS.md - VJPFlow (educational lazy autograd engine)
 
 Operational knowledge base for this repo. Keep it current after significant
 changes (see "Maintenance" at the end).
@@ -15,7 +15,7 @@ changes (see "Maintenance" at the end).
 - **Runtime deps:** `numpy>=2.0`. Optional extra `metal`:
   `pyobjc-framework-Metal` (Apple Silicon only).
 - **Dev tooling (uv `dev` group):** `pytest`, `ruff`, `pyright`.
-- **Build backend:** hatchling, `src/` layout, package = `src/autograd`.
+- **Build backend:** hatchling, `src/` layout, package = `src/vjpflow`.
 
 ### The three CI gates (run all three)
 

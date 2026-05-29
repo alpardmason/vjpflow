@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from autograd.models import gpt2
 from tests.util import check_grad
+from vjpflow.models import gpt2
 
 
 def _tiny_config() -> gpt2.GPT2Config:

@@ -7,11 +7,11 @@ pass; the engine produces the backward, and you verify with
 `tests/util.check_grad`.
 
 Two layers are already implemented as worked examples to copy the style from:
-`rmsnorm` and `silu`/`sigmoid` in `src/autograd/nn/functional.py`.
+`rmsnorm` and `silu`/`sigmoid` in `src/vjpflow/nn/functional.py`.
 
 > Workflow for every exercise:
 > 1. Read the note for the math and shapes.
-> 2. Write a forward function in `nn/functional.py` using only `autograd.primitives`.
+> 2. Write a forward function in `nn/functional.py` using only `vjpflow.primitives`.
 > 3. Add a `check_grad` test (finite-difference) -- if it passes, your layer is
 >    almost certainly correct, backward included.
 
